@@ -1,4 +1,4 @@
-# KAFKA PLAYGROUND NODEJS
+# KAFKA PLAYGROUND NODE.JS
 
 The purpose of this repo is to play with kafka, producers, consumers, etc. Feel free to add features to the repo.
 
@@ -65,6 +65,6 @@ Some explanations about playground structure and execution:
    3. Perform API calls to producer to start producing messages and see output to console for consumers.
 5. Additional options:
    1. You may want to add more consumers to the same group. At this case the easiest option is to build docker image and add it to docker-compose with relevant configurations
-   2. You can find the commented example for running consumer as part of docker compose setup
+   2. You can find the commented example for running consumer as part of docker compose setup.
    3. Building image is pretty simple. Just run "npm run upload" from specific server folder. This will create "simpleconsumer" or "slowconsumer" or "producer" images accordingly.
    4. All magic for running servers locally or creating images is in package.json file.
