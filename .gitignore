@@ -1,0 +1,11 @@
+./producer/node_modules
+./producer/package-lock.json
+./rdconsumer/node_modules
+./rdconsumer/package-lock.json
+./rdproducer/node_modules
+./rdproducer/package-lock.json
+./simpleConsumer/node_modules
+./simpleConsumer/package-lock.json
+./slowConsumer/node_modules
+./slowConsumer/package-lock.json
+package-lock.json
