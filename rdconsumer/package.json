@@ -2,16 +2,33 @@
   "name": "rdconsumer",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "src/server.ts",
   "scripts": {
-    "test": "test"
+    "dev": "TS_NODE_PROJECT=./tsconfig.rdproducer.json;config_env=dev nodemon ts-node src/server.ts",
+    "build": "tsc -p ./tsconfig.rdproducer.json",
+    "deploy:build": "docker build . -t rdproducer:latest",
+    "upload": "rm -rf ./deploy/dist && npm run build && npm run deploy:build"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bigpandaio/playground-kafka-nodejs.git"
+  },
+  "author": "Michael Sobol",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bigpandaio/playground-kafka-nodejs/issues"
+  },
+  "homepage": "https://github.com/bigpandaio/playground-kafka-nodejs#readme",
   "dependencies": {
-    "body-parser": "^1.20.0",
-    "express": "^4.17.3",
-    "node-rdkafka": "^2.12.0",
-    "nodemon": "^2.0.15"
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "highland": "^2.13.5",
+    "node-rdkafka": "2.12.0",
+    "nodemon": "^2.0.15",
+    "ts-node": "^8.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.12",
+    "typescript": "^3.5.1"
   }
 }
